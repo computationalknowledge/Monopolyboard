@@ -1,0 +1,50 @@
+class Board {
+var properties: [Property]
+init(properties: [Property]) {
+self.properties = properties
+}
+func getProperty(at index: Int) -> Property {
+return properties [index]
+}
+}
+class Property {
+var name: String 
+var price: Int
+var rentValue: Int 
+var owner: Player?
+init (name: String, price: Int, rentValue: Int) {
+self.name = name
+self.price = price
+self.rentValue = rentValue
+}
+func buyProperty(by player: Player) {
+player.cash -= price
+owner = player
+}
+func collectRent () -> Int {
+return rentValue
+}
+}
+class Player {
+var name: String 
+var cash: Int
+var propertiesOwned: [Property]
+init (name: String, cash: Int, propertiesowned: [Property] {
+self.name = name
+self.cash = cash
+self.propertiesOwned = propertiesOwned
+}
+func rollDice() -> Int {
+return Int.random(in: 1...6)
+}
+func moveToken (by spaces: Int) {
+ //move the token on the board
+ }
+func buyProperty(_ property: Property) {
+property.buyProperty(by: self)
+propertiesowned.append(property)
+}
+func payRent (_ rent: Int) {
+cash -= rent
+}
+}
