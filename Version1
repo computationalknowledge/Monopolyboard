@@ -29,7 +29,7 @@ class Player {
 var name: String 
 var cash: Int
 var propertiesOwned: [Property]
-init (name: String, cash: Int, propertiesowned: [Property] {
+init (name: String, cash: Int, propertiesowned: [Property]) {
 self.name = name
 self.cash = cash
 self.propertiesOwned = propertiesOwned
